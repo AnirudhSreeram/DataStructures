@@ -5,6 +5,8 @@ class BinarySearch:
     def search(self, item, input):
         Low, High = 0, len(input)
         value = 0
+        
+        #input = input.sort()
         while(value != item):
             if High < Low:
                 exit
@@ -20,8 +22,9 @@ class BinarySearch:
 
 def main():
     search_item = BinarySearch()
-    inp = [i for i in range(0, 100, 2)]
-    item = 54
+    inp = [10, 1, 9,19, 20, 400]
+    inp.sort()
+    item = 1
     print(search_item.search(item, inp))
 
 
